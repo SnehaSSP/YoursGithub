@@ -1,1 +1,21 @@
-
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: macos-latest # Use macOS runner for Mac
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 # Use the appropriate Python version
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Run bubu.py
+        run: python dudu.py
+        working-directory: ${{ github.workspace }} # Change directory to where bubu.py is located
+      - name: Run mult1.py
+        run: python mult1.py
+        working-directory: ${{ github.workspace }} # Change directory to where dudu.py is located
