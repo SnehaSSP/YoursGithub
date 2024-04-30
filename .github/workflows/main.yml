@@ -14,8 +14,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: Run bubu.py
-        run: python dudu.py
+        run: python bubu.py
         working-directory: ${{ github.workspace }} # Change directory to where bubu.py is located
-      - name: Run mult1.py
-        run: python mult1.py
+      - name: Run dudu.py
+        run: python dudu.py
         working-directory: ${{ github.workspace }} # Change directory to where dudu.py is located
